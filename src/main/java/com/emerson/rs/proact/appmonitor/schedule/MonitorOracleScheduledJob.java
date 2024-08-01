@@ -37,7 +37,7 @@ public class MonitorOracleScheduledJob {
     @Value("${app.monitor.env:dev}")
     private String env;
 
-    @Scheduled(initialDelay = 1000, fixedDelayString = "180000")
+    //@Scheduled(initialDelay = 1000, fixedDelayString = "180000")
     public void monitorAutoProcessedJob() {
         log.info("Start to monitor SF_AUTOPROCESS_PROGRAM job:");
         String jobName = "SF_AUTOPROCESS_NON_ADM_CUST";
@@ -50,7 +50,7 @@ public class MonitorOracleScheduledJob {
         }
     }
 
-    @Scheduled(initialDelay = 1000, fixedDelayString = "180000")
+    //@Scheduled(initialDelay = 1000, fixedDelayString = "180000")
     public void monitorADMAutoProcessedJob() {
         log.info("Start to monitor SF_AUTOPROCESS_ADM_ALARMS_JOB job:");
         String jobName = "SF_AUTOPROCESS_ADM_CUST";

@@ -2,7 +2,7 @@ package com.emerson.rs.proact.appmonitor.domain;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
