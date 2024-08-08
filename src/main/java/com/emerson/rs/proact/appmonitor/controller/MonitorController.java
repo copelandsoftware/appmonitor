@@ -34,7 +34,7 @@ public class MonitorController {
 
   @GetMapping("/cdmAutoProcess")
   String monitorCdmAutoProcess() {
-    log.info("Start to monitor SF_AUTOPROCESS_PROGRAM job:");
+    log.info("Start to monitor SF_AUTOPROCESS_NON_ADM_CUST job:");
     String jobName = "SF_AUTOPROCESS_NON_ADM_CUST";
     List<AllSchedulerJobsBean> autoProcessJob = allSchedulerJobsRepository.findJobByName(jobName);
     if (autoProcessJob.size() > 0) {
@@ -61,7 +61,7 @@ public class MonitorController {
   @GetMapping("/cdmAutoChannelling")
   String monitorCdmChannelling() {
     log.info("Start to monitor channelling:");
-    String jobName = "MSS_AUTO1";
+    String jobName = "MSS_CHANNELING1";
     List<AllSchedulerJobsBean> autoProcessJob = allSchedulerJobsRepository.findJobByName(jobName);
     if (autoProcessJob.size() > 0) {
       if (isNotification(jobName, autoProcessJob.get(0).getLastStartDate())) {
